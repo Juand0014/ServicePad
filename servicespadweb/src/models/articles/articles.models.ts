@@ -1,5 +1,5 @@
-export type article = {
-	author: string;
+export interface Article {
+	author: string,
 	content: string;
 	date: string;
 	id: number;
@@ -7,7 +7,7 @@ export type article = {
 	title: string;
 }
 
-export type articlePost = {
+export interface ArticlePost {
 	author: string;
 	content: string;
 	title: string;

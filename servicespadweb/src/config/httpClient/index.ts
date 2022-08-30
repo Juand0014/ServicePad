@@ -1,5 +1,5 @@
 import axios from "axios";
-import { environment } from "../../config";
+import { environment } from "../environment";
 
 export const api = axios.create({
 	baseURL: environment.apiUrl,

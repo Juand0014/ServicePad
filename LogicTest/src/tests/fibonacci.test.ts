@@ -1,5 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
-import { fibonnacciSequence } from '../';
+import { fibonnacciSequence } from '../serieFibonacci';
 
 describe('fibonaacci', () => {
 	test('adds 5 to equal [0,1,1,2,3]', () => {

@@ -1,5 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
-import { wordDetectRepetition } from '../'
+import { wordDetectRepetition } from '../wordDetectRepetition'
 
 describe('detect repetition', ()=>{
 	test('should count repetition of each word', ()=>{

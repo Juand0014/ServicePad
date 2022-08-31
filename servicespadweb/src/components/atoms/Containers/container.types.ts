@@ -1,0 +1,20 @@
+export type ContainerType = {
+	children?: React.ReactNode;
+	flex?: boolean;
+	fullHeight?: boolean;
+	fullWidth?: boolean;
+	height?: string;
+	width?: string;
+	flexDirection?: string;
+	justifyContent?: string;
+	alignItems?: string;
+	padding?: string;
+	margin?: string;
+	backgroundColor?: string;
+	borderRadius?: string;
+	border?: string;
+	boxShadow?: string;
+	overflow?: string;
+	position?: string;
+	zIndex?: number;
+};

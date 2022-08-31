@@ -1,9 +1,11 @@
 import { Title } from "./components/atoms"
-import { weights } from "./components/atoms/Texts/texts.types"
+// import { weights } from "./components/atoms/Texts/texts.types"
 import { Header } from "./components/organisms"
 import { HeaderProps } from "./components/organisms/header/header.type"
 import { AppRouter } from "./routes/AppRoutes"
+import { BsFacebook, BsTwitter, BsPinterest, BsInstagram, BsYoutube } from "react-icons/bs"
 import './styles/app.styles.scss'
+import { Footer } from "./components/organisms/footer"
 
 const App = () => {
 
@@ -44,9 +46,10 @@ const App = () => {
     <>
       <Header {...headerProps}/>
       <AppRouter />
-      <Title secondary weight="xl">
+      <Title secondary weight="xl" size="xl">
         Juan
       </Title>
+      <Footer />
     </>
   )
 }

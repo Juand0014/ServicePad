@@ -1,3 +1,5 @@
+import { Title } from "./components/atoms"
+import { weights } from "./components/atoms/Texts/texts.types"
 import { Header } from "./components/organisms"
 import { HeaderProps } from "./components/organisms/header/header.type"
 import { AppRouter } from "./routes/AppRoutes"
@@ -42,6 +44,9 @@ const App = () => {
     <>
       <Header {...headerProps}/>
       <AppRouter />
+      <Title secondary weight="xl">
+        Juan
+      </Title>
     </>
   )
 }

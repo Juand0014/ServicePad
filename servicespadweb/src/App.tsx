@@ -1,28 +1,46 @@
-import { useQuery } from "@tanstack/react-query"
-import { Header } from "./components/atoms"
+import { Header } from "./components/organisms"
+import { HeaderProps } from "./components/organisms/header/header.type"
 import { AppRouter } from "./routes/AppRoutes"
-import { services } from "./services/services"
+import './styles/app.styles.scss'
 
 const App = () => {
 
-  const onSuccess = () => {
-    console.log('success')
+  const headerProps: HeaderProps = {
+    title: "easybank",
+    contentList: [
+      {
+        content: "Home",
+        link: "/",
+        active: true
+      },
+      {
+        content: "About",
+        link: "/About",
+        active: true
+      },
+      {
+        content: "Contact",
+        link: "/Contact",
+        active: true
+      },
+      {
+        content: "Blog",
+        link: "/Blog",
+        active: true
+      },
+      {
+        content: "Careers",
+        link: "/Careers",
+        active: true
+      }
+    ],
+    textButton: "Request Invite",
+    bottonRef: "/add-article"
   }
-
-  const onError = () => {
-    console.log('error')
-  }
-
-  const { data, error, isLoading } = useQuery(["articles"], async () => services.findAll(), {
-    onSuccess,
-    onError
-  })
-
-  console.log(data);
 
   return (
     <>
-      <Header />
+      <Header {...headerProps}/>
       <AppRouter />
     </>
   )

@@ -2,13 +2,15 @@ import { Article } from "../../../models";
 import { ButtonLink, Title } from "../../atoms";
 import { CardsContainerArticles } from "../../atoms/Cards/CardContainer";
 import { Container } from "../../atoms/Containers";
-import { Cards } from "../../molecules/Cards/Cards";
+import { ArticlesCards } from "../../molecules";
 interface Props<T> {
     title: string;
     textBottom: string;
     buttonDirect: string;
     items: T[];
 }
+
+export type ArticlesSectionProps = Props<Article>;
 
 export const ArticlesSection = <T extends Props<Article>>({
     title,
@@ -31,7 +33,7 @@ export const ArticlesSection = <T extends Props<Article>>({
                 </Container>
                 <CardsContainerArticles>
                     {items.map((item: Article) => (
-                        <Cards key={item.id} {...item} />
+                        <ArticlesCards key={item.id} {...item} />
                     ))}
                 </CardsContainerArticles>
             </Container>

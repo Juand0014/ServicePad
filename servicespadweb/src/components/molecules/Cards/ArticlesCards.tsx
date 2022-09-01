@@ -8,7 +8,7 @@ export type CardType = {
     content: string;
 };
  
-export const Cards = ({ title, author, image_url, content }: CardType) => {
+export const ArticlesCards = ({ title, author, image_url, content }: CardType) => {
     return (
         <div className="card_articles">
             <div className="card_header_articles">

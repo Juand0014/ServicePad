@@ -40,17 +40,48 @@ export const CardBodyArticles = styled.div`
 	}
 `;
 
-
-
-
-
-
-
-
 export const CardsContainerBenefits = styled.div`
 	display: flex;
 	justify-content: space-between;
 	gap: 10px;
+
+	.card {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		text-align: justify;
+		text-justify: inter-word;
+		padding-inline: 10px;
+
+		.card-header {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		.card-body {
+			padding-right: 10px;
+		}
+		
+	}
 `;
 
+export const BenefitsSectionContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	padding: 50px;
+	margin: 80px 0px;
+	background-color: #F4F5F7;
 
+	.section-header {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding: 0px 10%;
+	}
+
+	.section-body {
+		padding: 0px 10%;
+	}
+`;

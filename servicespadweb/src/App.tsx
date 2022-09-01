@@ -6,6 +6,7 @@ import { AppRouter } from "./routes/AppRoutes"
 import { BsFacebook, BsTwitter, BsPinterest, BsInstagram, BsYoutube } from "react-icons/bs"
 import './styles/app.styles.scss'
 import { Footer } from "./components/organisms/footer"
+import { Card } from "./components/organisms/Card/Card"
 
 const App = () => {
 
@@ -46,9 +47,7 @@ const App = () => {
     <>
       <Header {...headerProps}/>
       <AppRouter />
-      <Title secondary weight="xl" size="xl">
-        Juan
-      </Title>
+      <Card />
       <Footer />
     </>
   )

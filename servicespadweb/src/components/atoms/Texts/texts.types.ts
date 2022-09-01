@@ -27,8 +27,10 @@ export const sizes = {
 export type TitleProps = {
 	primary? : boolean;
 	secondary? : boolean;
+	tertiary? : boolean;
 	weight?: keyof typeof weights;
 	size? : keyof typeof sizesTitle;
+	padding?: string;
 };
 
 export type TextProps = {

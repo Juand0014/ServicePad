@@ -23,7 +23,7 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Title = styled('p')<TitleProps>`
-  padding: 0;
+  padding: ${props => props.padding || '0'};
 	margin: 0;	
 ${props => props.primary && `
 		color: #000;
@@ -42,11 +42,17 @@ export const Subtitle = styled.h2`
 `;
 
 export const Text = styled('p')<TitleProps>`
+margin: 0;
+padding: 0;
 ${props => props.primary && `
 	color: #000;
 `}
 ${props => props.secondary && `
 	color: #fff;
+`}
+
+${props => props.tertiary && `
+	color: rgba(149, 148, 153, 1);
 `}
 font-size: ${props => sizes[props.size || 'sm']};
 font-weight: ${props => weights[props.weight || 'sm']};

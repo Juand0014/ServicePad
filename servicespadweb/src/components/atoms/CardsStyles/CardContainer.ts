@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 type CardContainerProps = {
 	row?: boolean;
 	column?: boolean;
+  backgroundColor?: string;
+  justifyContent?: string;
 }
 
 export const CardContainer = styled.div<CardContainerProps>`
@@ -10,10 +12,9 @@ export const CardContainer = styled.div<CardContainerProps>`
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: ${props => props.justifyContent};
 	flex-direction: ${props => props.row ? "row" : "column"};
-  background: #FAFAFA;
-  overflow: hidden;
+  background-color: ${props => props.backgroundColor};
 `;
 
 export const Separator = styled.span`

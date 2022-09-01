@@ -2,8 +2,6 @@ import styled from "@emotion/styled";
 import { ContainerType } from "./container.types";
 
 export const Container = styled.div<ContainerType>`
-	width: ${props => props.width || "auto"};
-	height: ${props => props.height || "auto"};
 	${props => 
 		props.flex && `
 			display: flex;
@@ -12,8 +10,10 @@ export const Container = styled.div<ContainerType>`
 			align-items: ${props.alignItems || ""};
 		`
 	};
-	padding: ${props => props.padding || "10px 0"};
-	margin: 0;
+	gap: ${props => props.gap};
+	padding: ${props => props.padding || "0"};
+	margin:  ${props => props.margin || "0"};
+	background-color:  ${props => props.backgroundColor};
 `;
 
 

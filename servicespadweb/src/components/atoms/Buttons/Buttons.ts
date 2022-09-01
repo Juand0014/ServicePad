@@ -12,6 +12,8 @@ type ButtonLinkProps = {
 
 export const ButtonLink = styled(Link)<ButtonLinkProps>`
 	text-decoration: none;
+	width: auto;
+	height: auto;
 	color: ${props => props.color || '#fff'};
 	border-radius: ${props => props.borderRadius || '20px'};
 	padding: ${props => props.padding || '10px 50px'};

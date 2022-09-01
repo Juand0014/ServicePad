@@ -1,6 +1,7 @@
 export type ContainerType = {
 	children?: React.ReactNode;
 	flex?: boolean;
+	gap?: string;
 	fullHeight?: boolean;
 	fullWidth?: boolean;
 	height?: string;

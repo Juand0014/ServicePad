@@ -1,4 +1,5 @@
 import { BsFacebook, BsInstagram, BsPinterest, BsTwitter, BsYoutube } from "react-icons/bs"
+import { IconLogo } from "../../../assets/icons/logo";
 import { Title, Text, ButtonLink } from "../../atoms";
 import { Icon } from "../../atoms";
 import { Container } from "../../atoms/Containers";
@@ -60,9 +61,7 @@ export const Footer = () => {
 		<footer className="footer">
 			<div className="footer__container">
 				<Container>
-					<Title secondary size="md">
-						easybank
-					</Title>
+					<IconLogo  />
 					<RenderListIcons contentList={contentList} />
 				</Container>
 				<RenderText items={textList[0]}/>

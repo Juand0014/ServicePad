@@ -2,6 +2,7 @@ import { ButtonLink } from '../../atoms/Buttons/Buttons';
 import { HeaderArchors } from '../../molecules';
 import { HeaderProps } from './header.type';
 import './header.styles.scss'
+import { IconLogo } from '../../../assets/icons/logo';
 
 export const Header = <T extends HeaderProps>({
 	title,
@@ -11,7 +12,7 @@ export const Header = <T extends HeaderProps>({
 }: T) => {
 	return (
 		<div className="header">
-			<p className="header__title">{title}</p>
+			<IconLogo color='#000'/>
 			 <HeaderArchors contentList={contentList}/>
 			<ButtonLink size='15px' to={bottonRef}>
 				{textButton}

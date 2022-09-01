@@ -1,6 +1,5 @@
 import { Article } from "../../../models";
 import { ButtonLink, Title } from "../../atoms";
-import { CardContainer } from "../../atoms/CardsStyles/CardContainer";
 import { Container } from "../../atoms/Containers";
 import { Cards } from "../../molecules/Cards/Cards";
 interface Props<T> {

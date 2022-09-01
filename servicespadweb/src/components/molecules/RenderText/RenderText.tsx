@@ -8,7 +8,7 @@ type Props = {
 
 
 export interface RenderTextProps {
-	items: Props[];
+	items: Props[]; 
 }
 
 export const RenderText = <T extends RenderTextProps>(
@@ -22,7 +22,7 @@ export const RenderText = <T extends RenderTextProps>(
 			padding="0 0 0 100px"
 		>
 			{items.map((item, index) => (
-				<Text key={index} size={'sm'} secondary>
+				<Text padding="10px 0" key={index} size={'sm'} secondary>
 					{item.text}
 				</Text>
 			))}

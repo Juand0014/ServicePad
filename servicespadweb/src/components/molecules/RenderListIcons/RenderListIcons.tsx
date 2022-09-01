@@ -14,7 +14,7 @@ export const RenderListIcons = <T extends RenderListIconsProps>({
 	contentList
 }: T) => {
 	return (
-		<Container>
+		<Container padding="50px 0 0 0">
 			{contentList.map((item, index) => (
 				<Icon key={index} to={item.to} >
 					{item.icon}

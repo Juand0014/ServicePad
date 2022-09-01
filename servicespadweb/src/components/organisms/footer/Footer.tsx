@@ -60,7 +60,7 @@ export const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="footer__container">
-				<Container>
+				<Container padding="10px 0 0 0">
 					<IconLogo  />
 					<RenderListIcons contentList={contentList} />
 				</Container>
@@ -72,11 +72,12 @@ export const Footer = () => {
 					flexDirection="column" 
 					justifyContent="center" 
 					alignItems={'center'} 
+					padding="20px 0 0 0"
 				>
-					<ButtonLink size="15px" to={''}>
+					<ButtonLink padding="10px 30px" size="15px" to={''}>
 					Request Invite
 					</ButtonLink>
-					<Text secondary size="xs">
+					<Text padding="20px 0" secondary size="xs">
 					© Easybank. All Rights Reserved
 					</Text>
 				</Container>

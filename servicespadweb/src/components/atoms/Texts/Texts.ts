@@ -43,7 +43,7 @@ export const Subtitle = styled.h2`
 
 export const Text = styled('p')<TitleProps>`
 margin: 0;
-padding: 0;
+padding: ${props => props.padding || '0'};
 ${props => props.primary && `
 	color: #000;
 `}

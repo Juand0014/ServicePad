@@ -19,7 +19,7 @@ export const ArticlesSection = <T extends Props<Article>>({
     items,
 }: T) => {
     return (
-        <Container padding="50px" margin="80px 0px" backgroundColor="#FAFAFA">
+        <Container padding="50px" margin="10px 0px" backgroundColor="#FAFAFA">
             <Container padding="0px 10%" flex flexDirection="column" gap="50px">
                 <Container flex justifyContent="space-between">
                     <Title size="xl">{title}</Title>

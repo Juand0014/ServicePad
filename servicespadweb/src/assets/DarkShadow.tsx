@@ -1,16 +1,19 @@
 import React from "react";
 
 interface GreenShadowProps {
-	width?: number;
-	height?: number;
+	width?: string;
+	height?: string;
+  className?: string;
 }
 
 const DarkShadow = <T extends GreenShadowProps>({
-	width = 100,
-	height = 100
+	width = '100px',
+	height = '100px',
+  className = '',
 }: T) => {
 	return (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}

@@ -71,7 +71,7 @@ export const BenefitsSectionContainer = styled.div`
 	flex-direction: column;
 	gap: 60px;
 	padding: 50px;
-	margin: 80px 0px;
+	margin-top: -50px;
 	background-color: #F4F5F7;
 
 	.section-header {

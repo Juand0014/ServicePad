@@ -1,9 +1,6 @@
-import { useQuery } from "@tanstack/react-query";
-import { AxiosResponse } from "axios";
-import { Article, ResponseEndpoint } from "../../../models";
-import { services } from "../../../services/services";
 import { ArticlesSection, ArticlesSectionProps } from "../../organisms";
 import { BenefitsSection } from "../../organisms/benefitsSection/BenefitsSection";
+import { HeroSection } from "../../organisms/infoSection/HeroSection";
 
 
 export const HomeTemplate = <T extends ArticlesSectionProps>({
@@ -15,6 +12,7 @@ export const HomeTemplate = <T extends ArticlesSectionProps>({
 	
 	return (
 		<>
+		  <HeroSection/>
 			<BenefitsSection />
 			<ArticlesSection
 					title={title}

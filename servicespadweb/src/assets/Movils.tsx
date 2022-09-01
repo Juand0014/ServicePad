@@ -1,18 +1,21 @@
 import React from "react";
 
 interface MovilsProps {
-  width: number;
-  height: number;
+  width: string;
+  height: string;
   blur?: number;
+  className?: string;
 }
 
 const Movils = <T extends MovilsProps>({
   width,
   height,
-  blur = 1
+  blur = 1,
+  className = "",
 }: T) => {
   return (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width={width}

@@ -1,7 +1,6 @@
-import { AxiosResponse } from "axios";
-import { Article, ResponseEndpoint } from "../../../models";
+import { Article } from "../../../models";
 import { ButtonLink, Title } from "../../atoms";
-import { CardContainer, Separator } from "../../atoms/CardsStyles/CardContainer"
+import { CardContainer } from "../../atoms/CardsStyles/CardContainer"
 import { Container } from "../../atoms/Containers";
 import { Cards } from "../../molecules/Cards/Cards";
 interface Props<T> {
@@ -11,7 +10,7 @@ interface Props<T> {
 	items: T[];
 }
 
-export const Card = <T extends Props<Article>>({
+export const ArticlesSection = <T extends Props<Article>>({
 	title,
 	textBottom,
 	buttonDirect,

@@ -3,7 +3,7 @@ import { HeaderProps } from "./components/organisms/header/header.type"
 import { AppRouter } from "./routes/AppRoutes"
 import './styles/app.styles.scss'
 import { Footer } from "./components/organisms/footer"
-import { Card } from "./components/organisms/Card/Card"
+import { ArticlesSection } from "./components/organisms"
 import { useQuery } from "@tanstack/react-query"
 import { services } from "./services/services"
 import { Article, ResponseEndpoint } from "./models"
@@ -58,7 +58,7 @@ const App = () => {
       <Header {...headerProps}/>
       <div style={{padding: '0px 100px'}}>
         <AppRouter />
-        <Card title="Latest Articles" buttonDirect="/Add-article" textBottom="+ Add New Article" items={responses as Article[]}  />
+        <ArticlesSection title="Latest Articles" buttonDirect="/Add-article" textBottom="+ Add New Article" items={responses as Article[]}  />
       </div>
       <Footer />
     </div>

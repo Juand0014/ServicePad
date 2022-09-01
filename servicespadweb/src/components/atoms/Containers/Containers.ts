@@ -12,7 +12,7 @@ export const Container = styled.div<ContainerType>`
 			align-items: ${props.alignItems || ""};
 		`
 	};
-	padding: ${props => props.padding || "0"};
+	padding: ${props => props.padding || "10px 0"};
 	margin: 0;
 `;
 

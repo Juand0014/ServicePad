@@ -23,7 +23,9 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Title = styled('p')<TitleProps>`
-	${props => props.primary && `
+  padding: 0;
+	margin: 0;	
+${props => props.primary && `
 		color: #000;
 	`}
 	${props => props.secondary && `

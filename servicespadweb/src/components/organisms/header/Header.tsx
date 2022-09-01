@@ -13,7 +13,7 @@ export const Header = <T extends HeaderProps>({
 		<div className="header">
 			<p className="header__title">{title}</p>
 			 <HeaderArchors contentList={contentList}/>
-			<ButtonLink to={bottonRef}>
+			<ButtonLink size='15px' to={bottonRef}>
 				{textButton}
 			</ButtonLink>
 		</div>

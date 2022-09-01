@@ -7,6 +7,11 @@ export interface Article {
 	title: string;
 }
 
+export interface ResponseEndpoint<T>{
+	data?: T[] | [];
+	message: ''
+}
+
 export interface ArticlePost {
 	author: string;
 	content: string;

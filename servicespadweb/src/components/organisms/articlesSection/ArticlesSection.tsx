@@ -1,5 +1,6 @@
 import { Article } from "../../../models";
 import { ButtonLink, Title } from "../../atoms";
+import { CardsContainerArticles } from "../../atoms/Cards/CardContainer";
 import { Container } from "../../atoms/Containers";
 import { Cards } from "../../molecules/Cards/Cards";
 interface Props<T> {
@@ -15,11 +16,10 @@ export const ArticlesSection = <T extends Props<Article>>({
     buttonDirect,
     items,
 }: T) => {
-    console.log(items);
     return (
         <Container padding="50px" margin="80px 0px" backgroundColor="#FAFAFA">
             <Container padding="0px 10%" flex flexDirection="column" gap="50px">
-                <Container flex justifyContent="space-between" >
+                <Container flex justifyContent="space-between">
                     <Title size="xl">{title}</Title>
                     <ButtonLink
                         to={buttonDirect}
@@ -29,7 +29,11 @@ export const ArticlesSection = <T extends Props<Article>>({
                         {textBottom}
                     </ButtonLink>
                 </Container>
-				<Cards author="" content="" image_url="" title="" />
+                <CardsContainerArticles>
+                    {items.map((item: Article) => (
+                        <Cards key={item.id} {...item} />
+                    ))}
+                </CardsContainerArticles>
             </Container>
         </Container>
     );

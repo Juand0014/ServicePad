@@ -1,5 +1,5 @@
 import { Text, Title } from "../../atoms";
-import "./style.cards.scss";
+import { CardBodyArticles, CardsContainerArticles } from "../../atoms/Cards/CardContainer";
 
 export type CardType = {
     title: string;
@@ -7,70 +7,23 @@ export type CardType = {
     image_url: string;
     content: string;
 };
-
+ 
 export const Cards = ({ title, author, image_url, content }: CardType) => {
     return (
-        <div className="container_articles">
-            <div className="card_articles">
-                <div className="card-header_articles">
-                    <img
-                        src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg"
-                        alt="city"
-                    />
-                </div>
-                <div className="card-body_articles">
-                    <span className="author">By Juan</span>
-                    <Title weight="sm" size="sm" padding="10px 0">
-                        10 Rules of Dashboard Design
-                    </Title>
-                    <Text tertiary>Dashboard Design Guidelines</Text>
-                </div>
+        <div className="card_articles">
+            <div className="card_header_articles">
+                <img
+                    src={image_url}
+                    alt="city"
+                />
             </div>
-            <div className="card_articles">
-                <div className="card-header_articles">
-                    <img
-                        src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg"
-                        alt="city"
-                    />
-                </div>
-                <div className="card-body_articles">
-                    <span className="author">By Juan</span>
-                    <Title weight="sm" padding="10px 0">
-                        10 Rules of Dashboard Design
-                    </Title>
-                    <Text>Dashboard Design Guidelines</Text>
-                </div>
-            </div>
-            <div className="card_articles">
-                <div className="card-header_articles">
-                    <img
-                        src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg"
-                        alt="city"
-                    />
-                </div>
-                <div className="card-body_articles">
-                    <span className="author">By Juan</span>
-                    <Title weight="sm" padding="10px 0">
-                        10 Rules of Dashboard Design
-                    </Title>
-                    <Text>Dashboard Design Guidelines</Text>
-                </div>
-            </div>
-            <div className="card_articles">
-                <div className="card-header_articles">
-                    <img
-                        src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg"
-                        alt="city"
-                    />
-                </div>
-                <div className="card-body_articles">
-                    <span className="author">By Juan</span>
-                    <Title weight="sm" padding="10px 0">
-                        10 Rules of Dashboard Design
-                    </Title>
-                    <Text>Dashboard Design Guidelines</Text>
-                </div>
-            </div>
+            <CardBodyArticles>
+                <span className="author">By {author}</span>
+                <Title weight="sm" size="sm" padding="10px 0">
+                    {title}
+                </Title>
+                <Text tertiary size="xl">{content}</Text>
+            </CardBodyArticles>
         </div>
     );
 };

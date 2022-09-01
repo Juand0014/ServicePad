@@ -8,6 +8,7 @@ import { services } from "./services/services";
 import { Article, ResponseEndpoint } from "./models";
 import { AxiosResponse } from "axios";
 import { BenefitsSection } from "./components/organisms/benefitsSection/BenefitsSection";
+import { HomeTemplate } from "./components/templates";
 
 const App = () => {
     const { data: response, isLoading } = useQuery<AxiosResponse>(
@@ -66,18 +67,7 @@ const App = () => {
     return (
         <div className="App">
             <Header {...headerProps} />
-            <div>
-
-                    <AppRouter />
-                    <BenefitsSection />
-                    <ArticlesSection
-                        title="Latest Articles"
-                        buttonDirect="/Add-article"
-                        textBottom="+ Add New Article"
-                        items={responses as Article[]}
-                    />
-
-            </div>
+                <AppRouter />
             <Footer />
         </div>
     );

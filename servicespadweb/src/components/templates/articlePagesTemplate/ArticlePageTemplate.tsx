@@ -6,11 +6,13 @@ export const ArticlePageTemplate = <T extends ArticlesSectionProps>({
 	textBottom,
 	buttonDirect,
 	items,
+	isLoading
 }: T) =>{
 	return (
 		<div>
 			<FormSections />
 			<ArticlesSection
+					isLoading={isLoading}
 					withButton={false}
 					title={title}
 					buttonDirect={buttonDirect}

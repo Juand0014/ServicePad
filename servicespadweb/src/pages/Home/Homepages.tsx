@@ -25,17 +25,14 @@ export const Home = () => {
 	
 	const responses = response || ([] as Article[]);
 
-	// if(isLoading) {
-	// 	return <div>Loading...</div>
-	// }
-
 	return (
 		<HomeTemplate
-			withButton
+			withButton={true}
 			title="Latest Articles"
 			buttonDirect="/Add-article"
 			textBottom="+ Add New Article"
 			items={responses as Article[]}
+			isLoading={isLoading}
  		/>
 	)
 } ;

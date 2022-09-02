@@ -29,6 +29,7 @@ export const AddArticle = () => {
 				withButton={false}
 				title="Latest Articles"		
 				items={responses as Article[]}
+				isLoading={isLoading}
 			/>
 		</div>
 	);

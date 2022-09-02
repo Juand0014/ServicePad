@@ -9,17 +9,23 @@ interface Props<T> {
     buttonDirect?: string;
     withButton: boolean;
     items: T[];
+    isLoading: boolean;
 }
 
-export type ArticlesSectionProps = Props<Article>;
+export interface ArticlesSectionProps extends Props<Article> {   }
 
-export const ArticlesSection = <T extends Props<Article>>({
+export const ArticlesSection = <T extends ArticlesSectionProps>({
     title,
     textBottom,
     buttonDirect,
     items,
-    withButton = true
+    withButton = true,
+    isLoading = false
 }: T) => {
+
+    if(isLoading) {
+        return <div>Loading...</div>
+    }
     return (
         <Container padding="50px" margin="10px 0px" backgroundColor="#FAFAFA">
             <Container padding="0px 10%" flex flexDirection="column" gap="50px">

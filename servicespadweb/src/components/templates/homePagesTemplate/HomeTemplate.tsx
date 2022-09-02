@@ -8,6 +8,7 @@ export const HomeTemplate = <T extends ArticlesSectionProps>({
 		textBottom,
 		buttonDirect,
 		items,
+		isLoading
 }: T) => {
 	
 	return (
@@ -15,11 +16,12 @@ export const HomeTemplate = <T extends ArticlesSectionProps>({
 		  <HeroSection/>
 			<BenefitsSection />
 			<ArticlesSection
-					withButton={false}
+					withButton={true}
 					title={title}
 					buttonDirect={buttonDirect}
 					textBottom={textBottom}
 					items={items}
+					isLoading={isLoading}
 			/>
 		</>
 	);

@@ -1,7 +1,8 @@
 import { formatDate } from "../../../helpers/formatters/formatters";
 import { Article } from "../../../models"
 import { Button, Text, Title } from "../../atoms";
-import { SectionsCardInfo } from "../../atoms/Sections/SectionStyle";
+import { SectionsCardInfo, TableSection } from "../../atoms/Sections/SectionStyle";
+import { TableContainer } from "../../atoms/Table";
 import './table.style.scss';
 
 interface TableProps {
@@ -10,7 +11,7 @@ interface TableProps {
 
 export const Table = ({data}: TableProps) => {
 	return (
-		<div className="table-section-container">
+		<TableSection>
 			<SectionsCardInfo>
 				<div className="title">
 					<Title size="xl">Articles</Title>
@@ -22,8 +23,8 @@ export const Table = ({data}: TableProps) => {
 					</Text>
 				</div>
 			</SectionsCardInfo>
-			<div className="table-section">
-				<table className="styled-table">
+			<div className="section-details">
+				<TableContainer>
 					<thead className="table-header" >
 						<tr>
 							<th>Author Name</th>
@@ -54,8 +55,8 @@ export const Table = ({data}: TableProps) => {
 							</tr>
 						))}
 					</tbody>
-				</table>
+				</TableContainer>
 			</div>
-		</div>
+		</TableSection>
 	);
 }

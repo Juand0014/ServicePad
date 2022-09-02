@@ -66,4 +66,12 @@ export const SectionsCardInfo = styled.div`
 	.subtitle {
 		padding-bottom: 40px;
 	}
-`
+`;
+
+export const TableSection = styled.div`
+	.section-details {
+		display: flex;
+		justify-content: center;
+		overflow-x: auto;
+	}
+`;

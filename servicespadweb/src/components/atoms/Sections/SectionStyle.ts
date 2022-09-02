@@ -56,8 +56,8 @@ export const ImageSectionContainer = styled.div`
 	}
 `;
 
-export const FormSection = styled.div`
-	padding: 30px 10%;
+export const SectionsCardInfo = styled.div`
+	padding: 30px 12%;
 
 	.title {
 		padding: 20px 0;

@@ -10,7 +10,7 @@ import {
     Input,
     Label,
 } from "../../atoms/Forms/FormsStyle";
-import { FormSection } from "../../atoms/Sections/SectionStyle";
+import { SectionsCardInfo } from "../../atoms/Sections/SectionStyle";
 import { FormMolecule } from "../../molecules/Form/Form";
 
 const defaultFieldValues = {
@@ -48,7 +48,7 @@ export const FormSections = ({}) => {
         reset();
     };
     return (
-        <FormSection>
+        <SectionsCardInfo>
             <div className="section-new-article-header">
                 <div className="title">
                     <Title size="xl">Add New Blog Article</Title>
@@ -111,6 +111,6 @@ export const FormSections = ({}) => {
                     </Button>
                 </FormMolecule>
             </FormContainer>
-        </FormSection>
+        </SectionsCardInfo>
     );
 };

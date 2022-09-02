@@ -28,6 +28,7 @@ export type TitleProps = {
 	primary? : boolean;
 	secondary? : boolean;
 	tertiary? : boolean;
+	danger?: boolean;
 	weight?: keyof typeof weights;
 	size? : keyof typeof sizesTitle;
 	padding?: string;

@@ -1,3 +1,4 @@
-export * from '../organisms/header';
-export * from '../organisms/footer';
-export * from '../organisms/articlesSection';
+export * from './header';
+export * from './footer';
+export * from './articlesSection';
+export * from './formSection';

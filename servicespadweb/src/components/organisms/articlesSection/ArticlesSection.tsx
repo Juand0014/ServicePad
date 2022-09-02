@@ -5,8 +5,9 @@ import { Container } from "../../atoms/Containers";
 import { ArticlesCards } from "../../molecules";
 interface Props<T> {
     title: string;
-    textBottom: string;
-    buttonDirect: string;
+    textBottom?: string;
+    buttonDirect?: string;
+    withButton: boolean;
     items: T[];
 }
 
@@ -17,19 +18,24 @@ export const ArticlesSection = <T extends Props<Article>>({
     textBottom,
     buttonDirect,
     items,
+    withButton = true
 }: T) => {
     return (
         <Container padding="50px" margin="10px 0px" backgroundColor="#FAFAFA">
             <Container padding="0px 10%" flex flexDirection="column" gap="50px">
                 <Container flex justifyContent="space-between">
                     <Title size="xl">{title}</Title>
-                    <ButtonLink
-                        to={buttonDirect}
-                        size="15px"
-                        background="linear-gradient(90deg, #84E1A7 4.85%, #81D6DB 100%);"
-                    >
-                        {textBottom}
-                    </ButtonLink>
+                    {
+                        withButton && (
+                            <ButtonLink
+                                to={buttonDirect || ""}
+                                size="15px"
+                                background="linear-gradient(90deg, #84E1A7 4.85%, #81D6DB 100%);"
+                            >
+                                {textBottom}
+                            </ButtonLink>
+                        )
+                    }
                 </Container>
                 <CardsContainerArticles>
                     {items.map((item: Article) => (

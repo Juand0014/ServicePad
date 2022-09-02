@@ -22,7 +22,7 @@ export const HeroSection = () => {
 							</div>
 						</TextSectionContainer>
 						<ImageSectionContainer>
-								<Shadows width='100%' height='700' className='shadows' />
+								<Shadows width='100%' height='800' className='shadows' />
 								<Movils width='100%' height='100%' className='movils-image'/>
 						</ImageSectionContainer>
 				</InfoSectionContainer>

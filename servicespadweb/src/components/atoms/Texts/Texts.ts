@@ -54,6 +54,10 @@ ${props => props.secondary && `
 ${props => props.tertiary && `
 	color: rgba(149, 148, 153, 1);
 `}
+
+${props => props.danger && `
+	color: #faa177
+`}
 font-size: ${props => sizes[props.size || 'sm']};
 font-weight: ${props => weights[props.weight || 'sm']};
 `;

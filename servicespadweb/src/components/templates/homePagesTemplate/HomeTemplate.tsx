@@ -15,6 +15,7 @@ export const HomeTemplate = <T extends ArticlesSectionProps>({
 		  <HeroSection/>
 			<BenefitsSection />
 			<ArticlesSection
+					withButton={false}
 					title={title}
 					buttonDirect={buttonDirect}
 					textBottom={textBottom}

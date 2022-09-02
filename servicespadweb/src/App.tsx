@@ -11,25 +11,6 @@ import { BenefitsSection } from "./components/organisms/benefitsSection/Benefits
 import { HomeTemplate } from "./components/templates";
 
 const App = () => {
-    const { data: response, isLoading } = useQuery<AxiosResponse>(
-        ["articles"],
-        async () => services.findAll(),
-        {
-            select(response) {
-                const { data } = response || ([] as Article[]);
-                return (
-                    data &&
-                    (data.filter(
-                        (item: Article, index: number) =>
-                            index >= data.length - 4
-                    ) as ResponseEndpoint<Article>)
-                );
-            },
-        }
-    );
-
-    const responses = response || ([] as Article[]);
-
     const headerProps: HeaderProps = {
         title: "easybank",
         contentList: [
@@ -63,7 +44,6 @@ const App = () => {
         bottonRef: "/add-article",
     };
 
-    if (isLoading) return <div>Loading...</div>;
     return (
         <div className="App">
             <Header {...headerProps} />

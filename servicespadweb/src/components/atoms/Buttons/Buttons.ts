@@ -21,11 +21,14 @@ export const ButtonLink = styled(Link)<ButtonLinkProps>`
 	background: ${props => props.background || 'linear-gradient(117deg, rgba(49, 207, 112, 1),rgba(44, 185, 203, 1) )'};
 `;
 
-export const StyledButton = styled.button`
-	border: none;
-	background-color: transparent;
-	color: inherit;
-	&:hover {
-		text-decoration: underline;
-	}
+export const Button = styled.button<ButtonLinkProps>`
+text-decoration: none;
+width: auto;
+height: auto;
+border: none;
+color: ${props => props.color || '#fff'};
+border-radius: ${props => props.borderRadius || '20px'};
+padding: ${props => props.padding || '10px 50px'};
+font-size: ${props => props.size || '10px'};
+background: ${props => props.background || 'linear-gradient(117deg, rgba(49, 207, 112, 1),rgba(44, 185, 203, 1) )'};
 `;
